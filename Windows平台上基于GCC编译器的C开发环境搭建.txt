@@ -1,0 +1,9 @@
+Windows平台上基于GCC编译器的C开发环境搭建
+
+1.使用MinGW
+	GCC编译器是Linux的标配，MinGW实现了将其移植到Windows平台上
+	MinGW下载地址：https://sourceforge.net/projects/mingw-w64/?source=typ_redirect
+
+2.使用Dev-C++
+	Dev-C++是一个免费的C/C++开发IDE，其内置了GCC编译器
+	Dev-C++下载地址：https://sourceforge.net/projects/orwelldevcpp/
