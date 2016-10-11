@@ -1,0 +1,4 @@
+mathematic operators:+,-,*,/,%,++,--
+relational operators:>,<,>=,<=,==,!=
+logical operatos:&&,||,!
+bit operators:&,|,~,^,>>,<<
