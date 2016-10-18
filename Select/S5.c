@@ -2,8 +2,6 @@
 	计科132 19213210 杨勇 2016/10/18
 	功能：输入年份year和月month，求该月有多少天。
 */
-#include <stdio.h>
-
 short days(short year,short month){
 	short months[12] = {31,28,31,30,31,30,31,31,30,31,30,31};
 	if((year%4 == 0 && year%100 !=0) || year%400 == 0){
@@ -15,6 +13,7 @@ short days(short year,short month){
 	return months[month-1];
 }
 
+#include <stdio.h>
 // test case
 int main(int argc, char const *argv[])
 {
