@@ -23,7 +23,6 @@ int main(int argc, char const *argv[])
 {
 	/* code */
 	printf("please input a character:");
-
 	char c = '0';
 	scanf("%c",&c);
 	judge_character(c);
