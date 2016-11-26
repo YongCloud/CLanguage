@@ -1,0 +1,60 @@
+/*
+	created by yangyong,Nov 26,2016
+	function:产生动态数组。编写程序，输入数组大小后，通过动态分配内存函数malloc产生数组。
+*/
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+// 给数组动态分配存储空间
+void allocate(int *arr,int size){
+	arr = (int *)malloc(size*sizeof(int));
+	if(!arr){
+		printf("allocate memory failed...\n");
+	}else{
+		printf("allocate memory succeeded...\n");
+	}
+}
+
+// 释放存储空间
+void free_memory(int *arr){
+	free(arr);
+}
+
+// 使用随机数填充数组
+void rand_array(int *arr,int size){
+	const int MAX = 100;
+	const int MIN = 0;
+	int i = 0;
+	srand((unsigned)time(NULL));
+	for(i=0;i<size;i++){
+		*(arr+i) = MIN+rand()%(MAX-MIN+1);
+	}
+}
+
+// 打印数组
+void print_array(int *arr,int size){
+	int i = 0;
+	for(i=0;i<size;i++){
+		printf("%d ",*(arr+i));
+	}
+	printf("\n");
+}
+
+// test case
+int main(int argc, char const *argv[]){
+	int *arr = NULL;
+	int size;
+
+	printf("please input the size of array:");
+	scanf("%d",&size);
+
+	allocate(arr,size);
+	rand_array(arr,size);
+
+	printf("the array that generated randomly is :\n");
+	print_array(arr,size);
+	free_memory(arr);
+
+	return 0;
+}
