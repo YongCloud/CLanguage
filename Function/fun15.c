@@ -6,13 +6,13 @@
 #include <stdlib.h>
 #include <time.h>
 
-// 给数组动态分配存储空间
-void allocate(int *arr,int size){
-	arr = (int *)malloc(size*sizeof(int));
-	if(!arr){
-		printf("allocate memory failed...\n");
+// 动态申请size个int类型的存储空间
+int *allocate(int size){
+	int *arr = (int *)malloc(size*sizeof(int));
+	if(arr){
+		return arr;
 	}else{
-		printf("allocate memory succeeded...\n");
+		return NULL;
 	}
 }
 
@@ -49,12 +49,20 @@ int main(int argc, char const *argv[]){
 	printf("please input the size of array:");
 	scanf("%d",&size);
 
-	allocate(arr,size);
-	rand_array(arr,size);
+	arr = allocate(size);
+	if(!arr){
+		printf("allocated memory unsuccessfully...\n");
+		return 1;
+	}else{
+		printf("allocated memory successfully...\n");
 
-	printf("the array that generated randomly is :\n");
-	print_array(arr,size);
-	free_memory(arr);
+		rand_array(arr,size);
+
+		printf("the array that generated randomly is :\n");
+		print_array(arr,size);
+
+		free_memory(arr);
+	}
 
 	return 0;
 }
