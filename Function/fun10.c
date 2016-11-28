@@ -4,9 +4,9 @@
 */
 #include <stdio.h>
 
-// copy s to t
-void string_copy(char *s,char *t){
-	while(*t++ = *s++){
+// copy string src to dst
+void string_copy(char *src,char *dst){
+	while(*dst++ = *src++){
 		;
 	}
 }
