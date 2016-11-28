@@ -4,13 +4,13 @@
 */
 #include <stdio.h>
 
-// cat s to t
-void string_cat(char *s,char *t){
-	while(*t++){
+// cat string src to dst
+void string_cat(char *src,char *dst){
+	while(*dst++){
 		;
 	}
-	t--;
-	while(*t++ = *s++){
+	dst--;
+	while(*dst++ = *src++){
 		;
 	}
 }
