@@ -27,8 +27,9 @@ void print_array(int *arr,int size){
 int main(int argc, char const *argv[]){
 	int a[] = {1,2,3};
 	int b[] = {4,5,6,7};
-	int a_size = sizeof(a)/sizeof(int);
-	int b_size = sizeof(b)/sizeof(int);
+	// calcute the size of array
+	int a_size = sizeof(a)/sizeof(a[0]);
+	int b_size = sizeof(b)/sizeof(b[0]);
 
 	printf("before swapping:\n");
 	printf("array a:");
