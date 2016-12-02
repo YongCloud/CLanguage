@@ -92,7 +92,7 @@ void reverse(int *arr,int start,int end){
 	}
 }
 
-// 交互2个整数
+// 交换2个整数
 void swap(int *a,int *b){
 	*a = *a ^ *b;
 	*b = *a ^ *b;
