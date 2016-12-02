@@ -31,7 +31,7 @@ int main(int argc, char const *argv[]){
 	return 0;
 }
 
-// 交互2个字符串的值
+// 交换2个字符串的值
 void swap_string(char *str1,char *str2){
 	char t[STRING_LENGTH];
 	strcpy(t,str1);
