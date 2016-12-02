@@ -1,5 +1,5 @@
 /*
-	created by ysngyong,Dec 2,2016
+	created by yangyong,Dec 2,2016
 	function:数组考试题2参考答案（拓展题17）
 */
 #include <stdio.h>
