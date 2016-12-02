@@ -4,7 +4,7 @@
 */
 #include <stdio.h>
 #include <stdlib.h>
-#define STRING_LENGTH 30
+#define STRING_LENGTH 30 // 字符串长度
 
 int main(int argc, char const *argv[]){
 	char str[STRING_LENGTH];
